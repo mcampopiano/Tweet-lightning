@@ -1,0 +1,57 @@
+body {
+  font-family: -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-size: 2em;
+  background-color: #1da1f2;
+  color: white;
+  font-weight: bold;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+#tweet__container {
+  margin: auto;
+  width: 80%;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.tweet {
+  color: rgb(12, 12, 12);
+  padding: 1em;
+  border: 1px solid #1da0f259;
+  margin-bottom: 0.5em;
+}
+
+.tweet:hover {
+  background-color: rgb(243, 243, 243);
+}
+
+.tweet-handle {
+  color: gray;
+  padding-left: 0.5em;
+  font-weight: 400;
+}
+
+.tweet__header {
+  width: 100px;
+  display: block;
+  height: 40px;
+  text-decoration: none;
+  padding-left: 30px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.tweet__header:before {
+  content: "";
+  background: url("https://icons-for-free.com/iconfiles/png/512/social+tweet+twitter+icon-1320192248146512175.png");
+  background-size: cover;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-left: -35px;
+}
