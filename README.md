@@ -4,7 +4,7 @@
 
 ### PART 1
 
-1. Write a function named `tweetConcat` that returns a string.
+1. In main.js, write a function named `tweetConcat` that returns a string.
    The function should have two parameters:
 
    - one for a programming concept
@@ -51,10 +51,10 @@ const tweet1 = tweetConcat("array methods", "challenging");
    - and one for a tweet message
 3. Using either concatenation or interpolation, the function should build a string of HTML with the following structure:
    - an article element with a class of 'tweet'
-   - a div with a class of 'tweet\*\*header',
+   - a div with a class of `tweet__header`,
      - \*\* the username and twitter handle go in this div
      - \*\* wrap the twitter handle in a span tag with a class of 'tweet-handle'
-   - a div with a class of 'tweet\*\*message'
+   - a div with a class of `tweet__message`
      - \*\* the message goes in this div
 4. The function should get a reference to a DOM element with the ID of `tweet__container`
 5. Append the HTML string to the DOM element you just referenced
@@ -87,7 +87,7 @@ const tweetCard = () => {
    - one for a message string,
    - one for a number of exclamation points at the end
 3. The function should ensure the message text is converted to ALL CAPS - hint (search string methods)
-4. The function should end the message with as many exclamation points as indicated by the number being passed in
+4. The function should end the message by REPEATING as many exclamation points as indicated by the number being passed in
 5. Invoke the `rageTweet` function with the appropriate arguments and store the result in a new variable called `tweet3`
 6. Log tweet3 to the console
 
