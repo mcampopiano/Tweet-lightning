@@ -8,8 +8,8 @@
     "Learning (...concept) in class today. It's really (...adjective)."
 */
 
-const tweetConcat = () => {
-  // your awesome code here
+const tweetConcat = (concept, adj) => {
+  return "Learning " + concept + " in class today. It's really " + adj + "."
 };
 
 /*
@@ -33,6 +33,11 @@ console.log(tweet1);
 
     3. Log tweet2 to the console
 */
+const tweetInterp = (concept, adj) => {
+    return `Learning ${concept} in class today. It's really ${adj} `
+}
+const tweet2 = tweetInterp("Concatenation", "hard")
+console.log(tweet2)
 
 // TODO: PART 3
 /*
@@ -54,19 +59,21 @@ console.log(tweet1);
         be sure to pass in the additional name and handle arguments for each
 */
 
-const tweetCard = () => {
-  //   starter HTML:
-  /*
-        <article class="">
-        <div class="">
-            ...NAME GOES HERE <span class=""> ...HANDLE GOES HERE </span>
+const tweetCard = (username, handle, message) => {
+    const contentContainer = document.querySelector("#tweet__container")
+    contentContainer.innerHTML += `
+        <article class="tweet">
+        <div class="tweet__header">
+        ${username}<span class="tweet-handle">${handle}</span>
         </div>
-        <div class=""> ...MESSAGE GOES HERE </div>
-        </article>;
-    */
-  // get reference to DOM element
-  // append HTML String to DOM element
-};
+        <div class="tweet__message">${message}</div>
+        </article>`
+   
+ 
+}
+tweetCard("Mario", "mcamp", tweet1)
+tweetCard("Luigi", "lcamp", tweet2 )
+
 
 // ! BONUS CHALLENGE:
 // TODO: PART 4
@@ -82,3 +89,16 @@ const tweetCard = () => {
         For Example: rageTweet("event hubs are melting my brain", 10)
         Should return: EVENT HUBS ARE MELTING MY BRAIN!!!!!!!!!!
 */
+
+const rageTweet = (message, numOfExcitement) => {
+    let newString = ""
+    for (let i = 0; i < numOfExcitement; i++) {
+        
+       newString += "!"
+       
+    }
+    const newMessage = message + newString
+    return newMessage.toUpperCase()
+}
+const angryTweet = rageTweet("testing this out", 5)
+console.log(angryTweet)
